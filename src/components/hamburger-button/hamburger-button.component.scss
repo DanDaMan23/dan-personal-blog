@@ -1,7 +1,7 @@
 @use "../../style-utils/colors.scss" as *;
 
 .toggle-button {
-  width: 3rem;
+  width: 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -13,6 +13,6 @@
     height: 0.2rem;
     background: $primary-color;
     display: block;
-    margin: 0.6rem 0;
+    margin: 0.5rem 0;
   }
 }

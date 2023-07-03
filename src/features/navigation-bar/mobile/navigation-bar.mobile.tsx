@@ -3,8 +3,9 @@ import "./navigation-bar.mobile.scss"
 
 export default function NavigationBar() {
   return (
-    <div>
+    <div className='navigation-bar'>
       <HamburgerButton onClick={() => {}} />
+      <h2>DanDaMan</h2>
     </div>
   )
 }
