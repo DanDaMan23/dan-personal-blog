@@ -1,0 +1,18 @@
+@use "../../style-utils/colors.scss" as *;
+
+.toggle-button {
+  width: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  vertical-align: middle;
+
+  .bar {
+    width: 100%;
+    height: 0.2rem;
+    background: $primary-color;
+    display: block;
+    margin: 0.6rem 0;
+  }
+}

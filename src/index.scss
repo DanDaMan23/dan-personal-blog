@@ -1,9 +1,4 @@
-// Colors
-$primary-color: rgb(58, 40, 106);
-$secondary-color: rgb(115, 98, 161);
-$teritary-color: rgb(82, 56, 157);
-$background-color: rgb(92, 79, 134);
-// $-color: rgb(62, 47, 102);
+@use "./style-utils/colors.scss" as *;
 
 body {
   margin: 0;
