@@ -1,8 +1,10 @@
-import { navigationItems } from "../../navigation-items"
+import useNavigationItems from "../../use-navigation-items"
 
 import "./nav-items.mobile.scss"
 
 export default function NavItems() {
+  const { navigationItems } = useNavigationItems()
+
   return (
     <ul className='mobile-nav__items'>
       {navigationItems.map(({ label, onClick, subItems }) => (
