@@ -1,16 +1,14 @@
-import { useState } from "react"
+import { useContext } from "react"
 import Backdrop from "../../../components/backdrop/backdrop.component"
 import HamburgerButton from "../../../components/hamburger-button/hamburger-button.component"
 import "./navigation-bar.mobile.scss"
 import NavigationDrawer from "./drawer/navigation-drawer.mobile"
 import NavItems from "./nav-items/nav-items.mobile"
+import { NavigationMobileContext } from "./context/navigation.mobile.context"
 
-export default function NavigationBar() {
-  const [showMobileNavigation, setShowMobileNavigation] = useState(false)
-
-  const openNavigationDrawer = () => setShowMobileNavigation(true)
-
-  const closeNavigationDrawer = () => setShowMobileNavigation(false)
+export default function NavigationBarMobile() {
+  const { showMobileNavigation, openNavigationDrawer, closeNavigationDrawer } =
+    useContext(NavigationMobileContext)
 
   return (
     <>
