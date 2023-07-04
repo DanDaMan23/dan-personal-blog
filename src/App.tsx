@@ -2,12 +2,11 @@ import NavigationBar from "./features/navigation-bar/mobile/navigation-bar.mobil
 
 import "./App.scss"
 
-function App() {
+export default function App() {
   return (
     <div className='App'>
       <NavigationBar />
+      {/* Implement routing here */}
     </div>
   )
 }
-
-export default App

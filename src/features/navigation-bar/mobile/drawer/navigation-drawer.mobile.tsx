@@ -1,4 +1,6 @@
 import { ReactNode } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faClose } from "@fortawesome/free-solid-svg-icons"
 
 import "./navigation-drawer.mobile.scss"
 
@@ -19,8 +21,8 @@ export default function NavigationDrawer({
       className='navigation-drawer'
     >
       {/* Use SVG or FontAwesome Icons  */}
-      <button type='button' onClick={onClose}>
-        Close
+      <button type='button' className="close-button" onClick={onClose}>
+        <FontAwesomeIcon icon={faClose} />
       </button>
       <div>{children}</div>
     </div>

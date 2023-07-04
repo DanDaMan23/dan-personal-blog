@@ -8,9 +8,7 @@ import NavItems from "./nav-items/nav-items.mobile"
 export default function NavigationBar() {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false)
 
-  const openNavigationDrawer = () => {
-    setShowMobileNavigation(true)
-  }
+  const openNavigationDrawer = () => setShowMobileNavigation(true)
 
   const closeNavigationDrawer = () => setShowMobileNavigation(false)
 
