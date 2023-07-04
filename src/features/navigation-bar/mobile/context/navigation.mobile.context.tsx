@@ -1,4 +1,5 @@
-import { createContext, useState } from "react"
+import { createContext, useState, useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import NavigationBarMobile from "../navigation-bar.mobile"
 
 interface INavigationMobileContext {
@@ -14,11 +15,17 @@ export const NavigationMobileContext = createContext<INavigationMobileContext>({
 })
 
 export default function NavigationMobileContextProvider() {
+  const location = useLocation()
+
   const [showMobileNavigation, setShowMobileNavigation] = useState(false)
 
   const openNavigationDrawer = () => setShowMobileNavigation(true)
 
   const closeNavigationDrawer = () => setShowMobileNavigation(false)
+
+  useEffect(() => {
+    closeNavigationDrawer()
+  }, [location])
 
   const contextValue: INavigationMobileContext = {
     showMobileNavigation,

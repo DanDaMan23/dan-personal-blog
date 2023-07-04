@@ -7,32 +7,18 @@ import "./nav-items.mobile.scss"
 export default function NavItems() {
   const { navigationItems } = useNavigationItems()
 
-  const { closeNavigationDrawer } = useContext(NavigationMobileContext)
-
   return (
     <ul className='mobile-nav__items'>
       {navigationItems.map(({ label, onClick, subItems }) => (
         <li key={label} className='mobile-nav__item'>
-          <button
-            type='button'
-            onClick={() => {
-              onClick()
-              closeNavigationDrawer()
-            }}
-          >
+          <button type='button' onClick={onClick}>
             {label}
           </button>
           {subItems ? (
             <ul key={label} className='sub-nav__items'>
               {subItems.map(({ label, onClick }) => (
                 <li key={label} className='sub-nav__item'>
-                  <button
-                    type='button'
-                    onClick={() => {
-                      onClick()
-                      closeNavigationDrawer()
-                    }}
-                  >
+                  <button type='button' onClick={onClick}>
                     {label}
                   </button>
                 </li>
