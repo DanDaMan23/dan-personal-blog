@@ -3,6 +3,7 @@ import Backdrop from "../../../components/backdrop/backdrop.component"
 import HamburgerButton from "../../../components/hamburger-button/hamburger-button.component"
 import "./navigation-bar.mobile.scss"
 import NavigationDrawer from "./drawer/navigation-drawer.mobile"
+import NavItems from "./nav-items/nav-items.mobile"
 
 export default function NavigationBar() {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false)
@@ -24,7 +25,7 @@ export default function NavigationBar() {
         show={showMobileNavigation}
         onClose={closeNavigationDrawer}
       >
-        Home About Me Web Development Books Fitness Boxing Travel Contact Me
+        <NavItems />
       </NavigationDrawer>
     </>
   )

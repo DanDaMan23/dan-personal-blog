@@ -18,6 +18,7 @@ export default function NavigationDrawer({
       style={{ display: show ? "block" : "none" }}
       className='navigation-drawer'
     >
+      {/* Use SVG or FontAwesome Icons  */}
       <button type='button' onClick={onClose}>
         Close
       </button>
