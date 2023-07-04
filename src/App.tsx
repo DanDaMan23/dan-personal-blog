@@ -1,9 +1,12 @@
-import React from "react"
+import NavigationBar from "./features/navigation-bar/mobile/navigation-bar.mobile"
 
 import "./App.scss"
 
-function App() {
-  return <div className='App'>hello world</div>
+export default function App() {
+  return (
+    <div className='App'>
+      <NavigationBar />
+      {/* Implement routing here */}
+    </div>
+  )
 }
-
-export default App
