@@ -1,6 +1,4 @@
-import { useContext } from "react"
 import useNavigationItems from "../../use-navigation-items"
-import { NavigationMobileContext } from "../context/navigation.mobile.context"
 
 import "./nav-items.mobile.scss"
 
