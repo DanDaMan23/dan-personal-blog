@@ -1,0 +1,21 @@
+@use "../../style-utils/colors.scss" as *;
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background: url("../../photos/St\ Joseph\ Orathory.jpg");
+  background-position: center;
+
+  div {
+    text-align: center;
+    padding: 1rem;
+    margin: 10rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px $primary-color solid;
+    border-radius: 30px;
+    max-width: 35rem;
+  }
+}

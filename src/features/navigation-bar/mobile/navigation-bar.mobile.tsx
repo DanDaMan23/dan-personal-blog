@@ -12,9 +12,9 @@ export default function NavigationBarMobile() {
 
   return (
     <>
-      <div className='navigation-bar'>
+      <div className='navigation-bar-mobile'>
         <HamburgerButton onClick={openNavigationDrawer} />
-        <h2>DanDaMan</h2>
+        <h2>DLaw</h2>
       </div>
       <Backdrop show={showMobileNavigation} onClick={closeNavigationDrawer} />
       <NavigationDrawer
