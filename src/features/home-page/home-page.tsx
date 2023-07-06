@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router"
 import "./home-page.scss"
 
 export default function HomePage() {
+  const navigate = useNavigate()
+
   return (
     <main className='home-page'>
       <div>
@@ -12,6 +15,13 @@ export default function HomePage() {
           I am deeply committed to enhancing user experiences, always striving
           to deliver the absolute best.
         </p>
+        <button
+          type='button'
+          className='primary-button'
+          onClick={() => navigate("/aboutMe")}
+        >
+          Learn More About Me...
+        </button>
       </div>
     </main>
   )

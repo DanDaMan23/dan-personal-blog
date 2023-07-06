@@ -1,3 +1,6 @@
+@use "./style-utils/colors.scss" as *;
+@use "./style-utils/buttons.scss" as *;
+
 main {
   padding-top: 6rem;
 }
