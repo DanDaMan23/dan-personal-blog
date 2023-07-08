@@ -3,6 +3,7 @@ import NavigationMobileContextProvider from "./features/navigation-bar/mobile/co
 
 import "./App.scss"
 import HomePage from "./features/home-page/home-page"
+import Footer from "./features/footer/footer"
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
         </Route>
         <Route path='contactMe' element={<main>Contact Me</main>} />
       </Routes>
+      <Footer />
     </div>
   )
 }
