@@ -4,6 +4,7 @@ import NavigationMobileContextProvider from "./features/navigation-bar/mobile/co
 import "./App.scss"
 import HomePage from "./features/home-page/home-page"
 import Footer from "./features/footer/footer"
+import AboutMe from "./features/about-me/about-me"
 
 export default function App() {
   return (
@@ -15,16 +16,7 @@ export default function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route
-          path='aboutMe'
-          element={
-            <main>
-              <h1>About Me Page</h1>
-              {/* TODO: Think about a carousel below the outlet */}
-              <Outlet />
-            </main>
-          }
-        >
+        <Route path='aboutMe' element={<AboutMe />}>
           <Route path='webDevelopment' element={<>Web Development</>} />
           <Route path='books' element={<>Books Page</>} />
           <Route path='fitness' element={<>Fitness Page</>} />
