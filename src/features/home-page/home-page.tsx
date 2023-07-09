@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <main className='home-page'>
       <div>
-        <h3>Welcome to My World, It's Dan Here</h3>
+        <h2>Welcome to My World, I am Dan Lawrence Consengco</h2>
         <p>
           I am a Front-End Software Developer passionate about
           JavaScript/TypeScript, constantly learning in the ever-evolving tech

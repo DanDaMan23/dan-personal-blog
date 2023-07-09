@@ -10,11 +10,12 @@
 
   div {
     text-align: center;
-    padding: 1rem;
-    margin: 10rem;
-    background: rgba(255, 255, 255, 0.6);
+    padding: 4rem;
+    margin: 1rem;
+    background: rgba(255, 255, 255, 0.75);
     border: 1px $primary-color solid;
     border-radius: 30px;
-    max-width: 35rem;
+
+    max-width: 85vw;
   }
 }
