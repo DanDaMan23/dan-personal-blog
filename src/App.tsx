@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import NavigationMobileContextProvider from "./features/navigation-bar/mobile/context/navigation.mobile.context"
 
 import "./App.scss"

@@ -44,9 +44,16 @@ export default function Carousel({ items }: CarouselProps) {
         <div className='carousel-description'>
           <h4 className='carousel-title'>{items[index].title}</h4>
           <p className='carousel-details'>{items[index].details}</p>
+          <button type='button' onClick={() => {}}>
+            Learn More
+          </button>
         </div>
 
-        <button type='button' className='carousel-button' onClick={moveForwards}>
+        <button
+          type='button'
+          className='carousel-button'
+          onClick={moveForwards}
+        >
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
