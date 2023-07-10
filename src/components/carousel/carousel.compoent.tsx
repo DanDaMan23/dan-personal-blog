@@ -32,7 +32,7 @@ export default function Carousel({ items }: CarouselProps) {
 
   return (
     <>
-      <div className='carousel' style={{ background: items[index].image }}>
+      <div className='carousel' style={{ backgroundImage: items[index].image }}>
         <button
           type='button'
           className='carousel-button'
