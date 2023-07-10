@@ -61,7 +61,7 @@ export default function AboutMe() {
 
   return (
     <main className='about-me'>
-      <h1>About Me Page</h1>
+      <h1>About Me</h1>
       <Carousel items={carouselItems} />
 
       <div className='outlet' ref={outletRef}>

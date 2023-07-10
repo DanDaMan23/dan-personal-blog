@@ -1,0 +1,26 @@
+.contact-me-form {
+  margin: 1rem;
+  .form-field {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+
+    label,
+    input,
+    textarea {
+      margin: 0.3rem 0;
+    }
+
+    input,
+    textarea {
+      border-radius: 7px;
+      padding: 0.4rem;
+    }
+  }
+
+  .button-area {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+}
