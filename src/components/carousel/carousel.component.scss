@@ -50,5 +50,13 @@ $carousel-border-radius: 25px;
     .carousel-details {
       color: lightgray;
     }
+
+    .carousel-details {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }

@@ -1,5 +1,6 @@
 export interface ICarouselItem {
   image: string
   title: string
-  details: string
+  details: string,
+  onClick?: () => void
 }
