@@ -1,3 +1,5 @@
+@use '../../style-utils/colors.scss' as *;
+
 $carousel-border-radius: 25px;
 
 .carousel {
@@ -22,7 +24,7 @@ $carousel-border-radius: 25px;
     grid-row-end: -1;
 
     path {
-      color: white;
+      color: $light-text-color;
     }
   }
 
@@ -45,7 +47,7 @@ $carousel-border-radius: 25px;
 
     .carousel-title,
     .carousel-details {
-      color: lightgray;
+      color: $light-text-color;
     }
 
     .carousel-details {

@@ -1,6 +1,14 @@
 @use "./style-utils/colors.scss" as *;
 @use "./style-utils/buttons.scss" as *;
 
+#root {
+  background-image: url("./photos/dlawcons_logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 50vw;
+}
+
 main {
   padding-top: 6rem;
 

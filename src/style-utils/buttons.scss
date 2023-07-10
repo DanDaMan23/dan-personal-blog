@@ -11,6 +11,6 @@
 .primary-button:hover,
 .primary-button:active {
   color: $primary-color;
-  background: lightgray;
+  background: $light-text-color;
   border-color: $primary-color;
 }

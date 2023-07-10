@@ -6,16 +6,20 @@
   align-items: center;
 
   height: 100vh;
-  background: url("../../photos/St\ Joseph\ Orathory.jpg") center/cover;
+  // background: url("../../photos/St\ Joseph\ Orathory.jpg") center/cover;
 
   div {
     text-align: center;
     padding: 4rem;
     margin: 1rem;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(0, 0, 0, 0.75);
     border: 1px $primary-color solid;
     border-radius: 30px;
-
     max-width: 85vw;
+
+    p,
+    h2 {
+      color: $light-text-color;
+    }
   }
 }
