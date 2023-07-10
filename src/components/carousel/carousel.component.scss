@@ -37,9 +37,6 @@ $carousel-border-radius: 25px;
 
   .carousel-description {
     background: rgba(0, 0, 0, 0.7);
-    position: relative;
-    bottom: 0;
-    left: 0;
     grid-row-start: -2;
     grid-row-end: -1;
     border-radius: $carousel-border-radius $carousel-border-radius 0 0;
