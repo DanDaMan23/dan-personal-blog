@@ -23,11 +23,13 @@ export default function Carousel({ items }: CarouselProps) {
     )
 
   useEffect(() => {
-    setTimeout(() => {
+    const interval = setInterval(() => {
       setIndex((prevState) =>
         prevState === items.length - 1 ? 0 : prevState + 1
       )
     }, 10000)
+
+    return () => clearInterval(interval)
   }, [items.length])
 
   return (
