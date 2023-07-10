@@ -45,7 +45,7 @@ export default function Footer() {
   return (
     <div className='footer'>
       {footerItems.map(({ label, url, icon }) => (
-        <MediaLink label={label} url={url} icon={icon} />
+        <MediaLink key={label} label={label} url={url} icon={icon} />
       ))}
     </div>
   )
