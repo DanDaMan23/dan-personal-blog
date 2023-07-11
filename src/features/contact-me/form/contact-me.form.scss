@@ -1,9 +1,16 @@
+@use "../../../style-utils/media-queries.scss" as *;
+
 .contact-me-form {
   margin: 1rem;
+  padding: 1rem;
+
+  div {
+    margin: 0.5rem 0;
+  }
+
   .form-field {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 1rem;
 
     label,
     input,
@@ -18,9 +25,29 @@
     }
   }
 
-  .button-area {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@include desktop-view {
+  .contact-me-form {
+    max-width: 55rem;
+    .form-field {
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: flex-end;
+      button[type="submit"] {
+        width: unset;
+      }
+    }
+
+    textarea {
+      height: 45vh;
+    }
   }
 }
