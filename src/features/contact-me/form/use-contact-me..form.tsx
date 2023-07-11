@@ -31,5 +31,10 @@ export default function useContactMeForm() {
     setContactMeFormValues(initialFormValues)
   }
 
-  return { handleChange, handleSubmit, contactMeFormValues }
+  const handleClearForm = (e: FormEvent) => {
+    e.preventDefault()
+    setContactMeFormValues(initialFormValues)
+  }
+
+  return { handleChange, handleSubmit, contactMeFormValues, handleClearForm }
 }

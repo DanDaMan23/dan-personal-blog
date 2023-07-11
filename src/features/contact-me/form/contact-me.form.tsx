@@ -6,6 +6,7 @@ export default function ContactMeForm() {
   const {
     handleChange,
     handleSubmit,
+    handleClearForm,
     contactMeFormValues: { fullName, email, subject, message }
   } = useContactMeForm()
 
@@ -55,6 +56,9 @@ export default function ContactMeForm() {
       <div className='button-area'>
         <button type='submit' className='primary-button'>
           Submit
+        </button>
+        <button type='button' className='secondary-button' onClick={handleClearForm}>
+          Clear
         </button>
       </div>
     </form>
