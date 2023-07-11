@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function useContactMeForm() {
   interface IContactMeFormValues {
@@ -25,16 +26,33 @@ export default function useContactMeForm() {
     setContactMeFormValues((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log(contactMeFormValues)
+
+    await emailjs
+      .send(
+        "service_tfdxghl",
+        "template_cb5h6mg",
+        {
+          ...contactMeFormValues
+        },
+        "B1TgxrcFscxkVz81G"
+      )
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
     setContactMeFormValues(initialFormValues)
   }
 
-  const handleClearForm = (e: FormEvent) => {
+  const handleClear = (e: FormEvent) => {
     e.preventDefault()
+
     setContactMeFormValues(initialFormValues)
   }
 
-  return { handleChange, handleSubmit, contactMeFormValues, handleClearForm }
+  return { handleChange, handleSubmit, contactMeFormValues, handleClear }
 }
