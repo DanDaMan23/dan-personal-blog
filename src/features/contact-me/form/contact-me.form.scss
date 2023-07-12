@@ -47,6 +47,11 @@
     .form-field {
       display: grid;
       grid-template-columns: 1fr 6fr;
+
+      .error-field {
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
     }
 
     .button-area {
