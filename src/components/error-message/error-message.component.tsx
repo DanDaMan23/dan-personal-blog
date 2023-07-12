@@ -8,7 +8,7 @@ interface ErrorMessageProps {
   className?: string
 }
 
-export default function ErrorMessage({ message, className }: ErrorMessageProps) {
+export default function ErrorMessage({ message, className = "" }: ErrorMessageProps) {
   return (
     <div className={`error-message ${className}`}>
       <FontAwesomeIcon

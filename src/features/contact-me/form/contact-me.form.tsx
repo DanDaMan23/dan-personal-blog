@@ -1,6 +1,7 @@
 import useContactMeForm from "./use-contact-me..form"
 
 import "./contact-me.form.scss"
+import ErrorMessage from "../../../components/error-message/error-message.component"
 
 export default function ContactMeForm() {
   const {
@@ -22,6 +23,9 @@ export default function ContactMeForm() {
           value={fullName}
           onChange={handleChange}
         />
+        {validationErrors.fullName && (
+          <ErrorMessage className='error-field' message='Fullname Required' />
+        )}
       </div>
       <div className='form-field'>
         <label htmlFor='email'>Email: </label>
@@ -32,6 +36,9 @@ export default function ContactMeForm() {
           value={email}
           onChange={handleChange}
         />
+        {validationErrors.email && (
+          <ErrorMessage className='error-field' message='Email Required' />
+        )}
       </div>
       <div className='form-field'>
         <label htmlFor='subject'>Subject: </label>
@@ -42,6 +49,9 @@ export default function ContactMeForm() {
           value={subject}
           onChange={handleChange}
         />
+        {validationErrors.subject && (
+          <ErrorMessage className='error-field' message='Subject Required' />
+        )}
       </div>
       <div className='form-field'>
         <label htmlFor='message'>Message: </label>
@@ -53,12 +63,12 @@ export default function ContactMeForm() {
           cols={5}
           rows={10}
         ></textarea>
+        {validationErrors.message && (
+          <ErrorMessage className='error-field' message='Message Required' />
+        )}
       </div>
       <div className='button-area'>
-        <button
-          type='submit'
-          className='primary-button'
-        >
+        <button type='submit' className='primary-button'>
           Submit
         </button>
         <button
