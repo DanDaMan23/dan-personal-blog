@@ -7,7 +7,8 @@ export default function ContactMeForm() {
     handleChange,
     handleSubmit,
     handleClear,
-    contactMeFormValues: { fullName, email, subject, message }
+    contactMeFormValues: { fullName, email, subject, message },
+    validationErrors
   } = useContactMeForm()
 
   return (
@@ -54,10 +55,17 @@ export default function ContactMeForm() {
         ></textarea>
       </div>
       <div className='button-area'>
-        <button type='submit' className='primary-button'>
+        <button
+          type='submit'
+          className='primary-button'
+        >
           Submit
         </button>
-        <button type='button' className='secondary-button' onClick={handleClear}>
+        <button
+          type='button'
+          className='secondary-button'
+          onClick={handleClear}
+        >
           Clear
         </button>
       </div>
