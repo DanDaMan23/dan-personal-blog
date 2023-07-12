@@ -9,7 +9,8 @@ export default function ContactMeForm() {
     handleSubmit,
     handleClear,
     contactMeFormValues: { fullName, email, subject, message },
-    validationErrors
+    validationErrors,
+    formSubmissionStatus
   } = useContactMeForm()
 
   return (
@@ -69,7 +70,7 @@ export default function ContactMeForm() {
       </div>
       <div className='button-area'>
         <button type='submit' className='primary-button'>
-          Submit
+          {formSubmissionStatus === "loading" ? "Submitting..." : "Submit"}
         </button>
         <button
           type='button'

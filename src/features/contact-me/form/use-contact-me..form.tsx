@@ -23,6 +23,10 @@ export default function useContactMeForm() {
     Partial<IContactMeFormValues>
   >({})
 
+  const [formSubmissionStatus, setFormSubmissionStatus] = useState<
+    "init" | "loading" | "done"
+  >("init")
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
   ) => {
@@ -75,6 +79,7 @@ export default function useContactMeForm() {
         (value) => value.trim().length !== 0
       )
     ) {
+      setFormSubmissionStatus("loading")
       await emailjs
         .send(
           "service_tfdxghl",
@@ -92,6 +97,7 @@ export default function useContactMeForm() {
         })
 
       setContactMeFormValues(initialFormValues)
+      setFormSubmissionStatus("done")
     }
   }
 
@@ -108,6 +114,7 @@ export default function useContactMeForm() {
     contactMeFormValues,
     handleClear,
     validationErrors,
-    handleValidation
+    handleValidation,
+    formSubmissionStatus
   }
 }
