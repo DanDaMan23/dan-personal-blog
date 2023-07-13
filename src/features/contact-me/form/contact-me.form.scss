@@ -1,0 +1,84 @@
+@use "../../../style-utils/media-queries.scss" as *;
+@use "../../../style-utils/colors.scss" as *;
+
+.contact-me-form {
+  margin: 1rem;
+  padding: 1rem;
+
+  div {
+    margin: 0.5rem 0;
+  }
+
+  .form-field {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    label,
+    input,
+    textarea {
+      margin: 0.3rem 0;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $primary-color;
+      border-radius: 7px;
+      padding: 0.4rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 2px solid $primary-color;
+    }
+  }
+
+  .status-area {
+    display: flex;
+    justify-content: flex-end;
+
+    .email-sent {
+      grid-column-start: 2;
+      grid-column-end: -1;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    margin: auto auto 0.5rem auto;
+  }
+}
+
+@include desktop-view {
+  .contact-me-form {
+    max-width: 55rem;
+    .form-field {
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+
+      .error-field {
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        width: unset;
+      }
+
+      button[type="submit"] {
+        margin: auto 0.5rem auto auto;
+      }
+    }
+
+    textarea {
+      height: 45vh;
+    }
+  }
+}

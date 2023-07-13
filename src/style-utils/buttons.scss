@@ -1,15 +1,25 @@
 @use "./colors.scss" as *;
 
-.primary-button {
-  color: white;
-  background: $primary-color;
+.primary-button,
+.secondary-button {
   padding: 0.5rem;
   border-radius: 10px;
   cursor: pointer;
 }
 
+.primary-button {
+  color: white;
+  background: $primary-color;
+}
+
 .primary-button:hover,
-.primary-button:active {
+.primary-button:active,
+.secondary-button:hover,
+.secondary-button:active {
+  box-shadow: 5px 2.5px 2.5px lavender;
+}
+
+.secondary-button {
   color: $primary-color;
   background: $light-text-color;
   border-color: $primary-color;

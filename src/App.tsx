@@ -5,6 +5,7 @@ import "./App.scss"
 import HomePage from "./features/home-page/home-page"
 import Footer from "./features/footer/footer"
 import AboutMe from "./features/about-me/about-me"
+import ContactMePage from "./features/contact-me/page/contact-me.page"
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
           <Route path='boxing' element={<>Boxing Page</>} />
           <Route path='travel' element={<>Travel Page</>} />
         </Route>
-        <Route path='contactMe' element={<main>Contact Me</main>} />
+        <Route path='contactMe' element={<ContactMePage />} />
       </Routes>
       <Footer />
     </div>
