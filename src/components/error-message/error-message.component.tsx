@@ -4,17 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./error-message.component.scss"
 
 interface ErrorMessageProps {
-  message: string,
+  message: string
   className?: string
 }
 
-export default function ErrorMessage({ message, className = "" }: ErrorMessageProps) {
+export default function ErrorMessage({
+  message,
+  className = ""
+}: ErrorMessageProps) {
   return (
     <div className={`error-message ${className}`}>
-      <FontAwesomeIcon
-        icon={faCircleExclamation}
-        style={{ color: "red !important" }}
-      />
+      <FontAwesomeIcon icon={faCircleExclamation} />
       <p>{message}</p>
     </div>
   )

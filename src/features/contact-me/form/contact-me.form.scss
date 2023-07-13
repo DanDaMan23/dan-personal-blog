@@ -32,6 +32,16 @@
     }
   }
 
+  .status-area {
+    display: flex;
+    justify-content: flex-end;
+
+    .email-sent {
+      grid-column-start: 2;
+      grid-column-end: -1;
+    }
+  }
+
   button {
     width: 100%;
   }

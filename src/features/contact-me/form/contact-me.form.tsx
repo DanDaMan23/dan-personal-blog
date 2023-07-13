@@ -2,6 +2,7 @@ import useContactMeForm from "./use-contact-me..form"
 
 import "./contact-me.form.scss"
 import ErrorMessage from "../../../components/error-message/error-message.component"
+import SuccessMessage from "../../../components/success-message/success-message.component"
 
 export default function ContactMeForm() {
   const {
@@ -66,6 +67,11 @@ export default function ContactMeForm() {
         ></textarea>
         {validationErrors.message && (
           <ErrorMessage className='error-field' message='Message Required' />
+        )}
+      </div>
+      <div className='status-area'>
+        {formSubmissionStatus === "done" && (
+          <SuccessMessage message='Email Sent' className='email-sent' />
         )}
       </div>
       <div className='button-area'>
