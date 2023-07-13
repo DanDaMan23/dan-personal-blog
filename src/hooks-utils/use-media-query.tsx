@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react"
 
-export enum DeviceViewType {
+export enum DeviceView {
   Mobile,
   Tablet,
   Desktop
 }
 
 export default function useMediaQuery() {
-  const [deviceView, setDeviceView] = useState<DeviceViewType>(
-    DeviceViewType.Mobile
+  const [deviceView, setDeviceView] = useState<DeviceView>(
+    DeviceView.Mobile
   )
 
   useEffect(() => {
     const resizeHandler = () => {
       if (window.innerWidth >= 850) {
-        setDeviceView(DeviceViewType.Desktop)
+        setDeviceView(DeviceView.Desktop)
       } else {
-        setDeviceView(DeviceViewType.Mobile)
+        setDeviceView(DeviceView.Mobile)
       }
     }
 
