@@ -1,6 +1,9 @@
 import { createContext, useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import NavigationBarMobile from "../navigation-bar.mobile"
+import useMediaQuery, {
+  DeviceViewType
+} from "../../../../hooks-utils/use-media-query"
 
 interface INavigationMobileContext {
   showMobileNavigation: boolean
@@ -27,6 +30,8 @@ export default function NavigationMobileContextProvider() {
     closeNavigationDrawer()
   }, [location])
 
+  const { deviceView } = useMediaQuery()
+
   const contextValue: INavigationMobileContext = {
     showMobileNavigation,
     openNavigationDrawer,
@@ -35,7 +40,8 @@ export default function NavigationMobileContextProvider() {
 
   return (
     <NavigationMobileContext.Provider value={contextValue}>
-      <NavigationBarMobile />
+      {deviceView === DeviceViewType.Mobile ? <NavigationBarMobile /> : <></>}
+      {/* NavigationBarDesktop */}
     </NavigationMobileContext.Provider>
   )
 }
