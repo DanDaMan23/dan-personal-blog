@@ -1,0 +1,25 @@
+@use "../../../style-utils/colors.scss" as *;
+
+.navigation-bar-desktop {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  background: rgba(92, 79, 134, 0.75);
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+
+  .desktop-navigation {
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+  }
+
+  .desktop-navigation__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
