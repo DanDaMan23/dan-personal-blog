@@ -21,5 +21,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .desktop-navigation__item {
+      button {
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bolder;
+      }
+    }
   }
 }
