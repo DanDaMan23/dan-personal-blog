@@ -36,6 +36,7 @@ export default function NavigationMobileContextProvider() {
   return (
     <NavigationMobileContext.Provider value={contextValue}>
       <NavigationBarMobile />
+      {/* NavigationBarDesktop */}
     </NavigationMobileContext.Provider>
   )
 }

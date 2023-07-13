@@ -6,13 +6,21 @@ import HomePage from "./features/home-page/home-page"
 import Footer from "./features/footer/footer"
 import AboutMe from "./features/about-me/about-me"
 import ContactMePage from "./features/contact-me/page/contact-me.page"
+import useMediaQuery, { DeviceView } from "./hooks-utils/use-media-query"
+import NavigationBarDesktop from "./features/navigation-bar/desktop/navigation.desktop"
 
 export default function App() {
+  const { deviceView } = useMediaQuery()
+
   return (
     <div className='App'>
       {/* TODO: Consider putting this with the Desktop Navigation Bar */}
       <div className='main-header'>
-        <NavigationMobileContextProvider />
+        {deviceView === DeviceView.Mobile ? (
+          <NavigationMobileContextProvider />
+        ) : (
+          <NavigationBarDesktop />
+        )}
       </div>
 
       <Routes>

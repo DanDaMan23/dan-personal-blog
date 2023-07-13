@@ -1,0 +1,58 @@
+@use "../../../style-utils/colors.scss" as *;
+
+.navigation-bar-desktop {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  background: rgba(92, 79, 134, 0.75);
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+
+  .desktop-navigation {
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+  }
+
+  .desktop-navigation__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .desktop-navigation__item {
+      button {
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        text-align: center;
+        cursor: pointer;
+
+        color: $light-text-color;
+        font-weight: bolder;
+
+        path {
+          color: $light-text-color;
+        }
+      }
+
+      .desktop-navigation__sub-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .desktop-navigation__sub-item {
+          button {
+            color: $primary-color;
+            font-size: 1.2rem;
+            padding: 0.4rem;
+            width: 100%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
