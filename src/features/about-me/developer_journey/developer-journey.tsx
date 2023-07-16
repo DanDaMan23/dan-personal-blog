@@ -22,13 +22,14 @@ export default function DeveloperJourney() {
       <p>{text.webDevelopment.learningDetails.details}</p>
 
       <h4>{text.webDevelopment.learningMethods.heading}</h4>
-      <p>{text.webDevelopment.learningMethods.details[0]}</p>
-      <p>{text.webDevelopment.learningMethods.details[1]}</p>
-
+      {text.webDevelopment.learningMethods.details.map((detail) => (
+        <p>{detail}</p>
+      ))}
 
       <h5>{text.webDevelopment.learningMethods.analogy.heading}</h5>
-      <p>{text.webDevelopment.learningMethods.analogy.details[0]}</p>
-      <p>{text.webDevelopment.learningMethods.analogy.details[1]}</p>
+      {text.webDevelopment.learningMethods.analogy.details.map((detail) => (
+        <p>{detail}</p>
+      ))}
     </div>
   )
 }
