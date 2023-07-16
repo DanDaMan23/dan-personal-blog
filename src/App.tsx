@@ -9,6 +9,7 @@ import ContactMePage from "./features/contact-me/page/contact-me.page"
 import useMediaQuery, { DeviceView } from "./hooks-utils/use-media-query"
 import NavigationBarDesktop from "./features/navigation-bar/desktop/navigation.desktop"
 import DeveloperJourney from "./features/about-me/developer_journey/developer-journey"
+import ReadingHobby from "./features/about-me/reading-hobby/reading-hobby"
 
 export default function App() {
   const { deviceView } = useMediaQuery()
@@ -28,7 +29,7 @@ export default function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='aboutMe' element={<AboutMe />}>
           <Route path='webDevelopment' element={<DeveloperJourney />} />
-          <Route path='books' element={<>Books Page</>} />
+          <Route path='books' element={<ReadingHobby />} />
           <Route path='fitness' element={<>Fitness Page</>} />
           <Route path='boxing' element={<>Boxing Page</>} />
           <Route path='travel' element={<>Travel Page</>} />
