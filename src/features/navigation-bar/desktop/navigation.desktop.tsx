@@ -12,7 +12,7 @@ export default function NavigationBarDesktop() {
 
   return (
     <div className='navigation-bar-desktop'>
-      <img src={logo} alt='DLawCons' width={LOGO_SIZE} height={LOGO_SIZE} />
+      <img src={logo} alt='DLawCons' height={LOGO_SIZE} />
 
       <nav className='desktop-navigation'>
         <ul className='desktop-navigation__items'>
@@ -25,10 +25,10 @@ export default function NavigationBarDesktop() {
                 >
                   <ul className='desktop-navigation__sub-items'>
                     {subItems.map(({ label, onClick }) => (
-                      <li
-                        className='desktop-navigation__sub-item'
-                      >
-                        <button type="button" onClick={onClick}>{label}</button>
+                      <li className='desktop-navigation__sub-item'>
+                        <button type='button' onClick={onClick}>
+                          {label}
+                        </button>
                       </li>
                     ))}
                   </ul>
