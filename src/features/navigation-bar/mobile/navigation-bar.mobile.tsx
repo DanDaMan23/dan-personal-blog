@@ -17,7 +17,7 @@ export default function NavigationBarMobile() {
     <>
       <div className='navigation-bar-mobile'>
         <HamburgerButton onClick={openNavigationDrawer} />
-        <img src={logo} alt='DLawCons' width={LOGO_SIZE} height={LOGO_SIZE} />
+        <img src={logo} alt='DLawCons' height={LOGO_SIZE} />
       </div>
       <Backdrop show={showMobileNavigation} onClick={closeNavigationDrawer} />
       <NavigationDrawer
