@@ -13,5 +13,26 @@
       "author": "Meg Jay, PHD",
       "lessonLearned": "This book taught me how important my life in 20s and how my choices during those times will affect my 30s and so. It inspired me to cut off bad habits like scrolling through social media and how it can waste 1 or more hours of my day. 20s is the decade where I can learn and build myself up."
     }
+  },
+  "otherBooks": {
+    "mainTitle": "Other Books",
+    "fictions": {
+      "title": "Fiction Books",
+      "books": [
+        "Harry Potter (The Whole Series) by J.K. Rowling",
+        "Midnight Library by Matt Haig",
+        "The Alchemists by Paulo Coelho"
+      ]
+    },
+    "nonFictions": {
+      "title": "Non-Fictions",
+      "books": [
+        "Rich Dad Poor Dad by Robert Kiyosaki",
+        "The 10x Rule by Grant Cardone",
+        "Limitless by Jim Kwik",
+        "Deep Work by Cal Newport",
+        "Atomic Habits by James Clear"
+      ]
+    }
   }
 }
