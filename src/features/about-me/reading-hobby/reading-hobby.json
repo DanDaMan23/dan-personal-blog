@@ -1,0 +1,38 @@
+{
+  "mainTitle": "Reading Hobby",
+  "mainDescription": "During the challenging pandemic era marked by lockdowns, I made a conscious decision to let go of one unproductive hobby and embraced reading, which has had a profound impact on my life and significantly expanded my knowledge base.",
+  "topBooks": {
+    "title": "Top books I read so far",
+    "extremeOwnership": {
+      "title": "Extreme Ownership",
+      "author": "Jocko Willink and Leif Babin",
+      "lessonLearned": "This book is about how military tactics can be applied in the business world and in our daily lives. It taught me how discipline works by doing the right things as opposed to doing what feels right. Another thing that I learned is to own up to my mistakes and overcome them as opposed to blaming everyone else. Overall, I learned how to take ownership of the things that happens in my life."
+    },
+    "definingDecade": {
+      "title": "The Defining Decade",
+      "author": "Meg Jay, PHD",
+      "lessonLearned": "This book taught me how important my life in 20s and how my choices during those times will affect my 30s and so. It inspired me to cut off bad habits like scrolling through social media and how it can waste 1 or more hours of my day. 20s is the decade where I can learn and build myself up."
+    }
+  },
+  "otherBooks": {
+    "mainTitle": "Other Books",
+    "fictions": {
+      "title": "Fiction Books",
+      "books": [
+        "Harry Potter (The Whole Series) by J.K. Rowling",
+        "Midnight Library by Matt Haig",
+        "The Alchemists by Paulo Coelho"
+      ]
+    },
+    "nonFictions": {
+      "title": "Non-Fictions",
+      "books": [
+        "Rich Dad Poor Dad by Robert Kiyosaki",
+        "The 10x Rule by Grant Cardone",
+        "Limitless by Jim Kwik",
+        "Deep Work by Cal Newport",
+        "Atomic Habits by James Clear"
+      ]
+    }
+  }
+}
