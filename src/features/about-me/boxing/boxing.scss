@@ -1,0 +1,25 @@
+@use "../../../style-utils/colors.scss" as *;
+
+.boxing {
+  .side-scroll-items-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+
+    div {
+      background-color: $secondary-color;
+      margin: 1rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      display: flex;
+
+      img,
+      video {
+        width: 40vw;
+        height: auto;
+        border-radius: 25px;
+        max-width: 500px;
+      }
+    }
+  }
+}
