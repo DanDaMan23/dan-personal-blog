@@ -12,15 +12,18 @@ export default function Boxing() {
     <div className='boxing'>
       <h3>{text.mainTitle}</h3>
 
-      <p>{text.mainDetails}</p>
+      <p>{text.details[0]}</p>
 
+      {/* TODO: Adjust aspect ratio and put the side scroll on it's own component */}
       <div className='side-scroll-items-container'>
         {boxingImageList.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={image} width="200vw" />
+            <img src={image} alt={image} />
           </div>
         ))}
       </div>
+
+      <p>{}</p>
     </div>
   )
 }
