@@ -13,10 +13,12 @@
       border-radius: 10px;
       display: flex;
 
-      img {
-        // width: 10rem;
+      img,
+      video {
+        width: 40vw;
         height: auto;
-        border-radius: 10px;
+        border-radius: 25px;
+        max-width: 500px;
       }
     }
   }
