@@ -5,7 +5,7 @@ import ErrorMessage from "../../../components/error-message/error-message.compon
 import SuccessMessage from "../../../components/success-message/success-message.component"
 
 export default function ContactMeForm() {
-  const { register, onSubmit, onClear, errors, isSubmitSuccessful } =
+  const { register, onSubmit, onClear, errors, isSubmitSuccessful, isLoading } =
     useContactMeForm()
 
   return (
@@ -44,9 +44,9 @@ export default function ContactMeForm() {
         )}
       </div>
       <div className='button-area'>
-        <button type='submit' className='primary-button'>
-          Submit
-          {/* {formSubmissionStatus === "loading" ? "Submitting..." : "Submit"} */}
+        <button type='submit' className='primary-button' disabled={isLoading}>
+          {/* Submit */}
+          {isLoading ? "Submitting..." : "Submit"}
         </button>
         <button type='button' className='secondary-button' onClick={onClear}>
           Clear

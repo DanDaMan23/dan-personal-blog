@@ -1,10 +1,12 @@
-import { FormEvent } from "react"
+import { FormEvent, useState } from "react"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import emailjs from "@emailjs/browser"
 
 export default function useContactMeForm() {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+
   const contactMeFormSchema = yup
     .object({
       fullName: yup.string().required(),
@@ -28,6 +30,7 @@ export default function useContactMeForm() {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
     handleSubmit(async (data: ContactMeFormData) => {
+      setIsLoading(true)
       await emailjs
         .send(
           "service_tfdxghl",
@@ -44,6 +47,7 @@ export default function useContactMeForm() {
         .catch((error) => {
           console.log(error)
         })
+      setIsLoading(false)
     })()
   }
 
@@ -58,6 +62,7 @@ export default function useContactMeForm() {
     onClear,
     errors,
     isValid,
-    isSubmitSuccessful
+    isSubmitSuccessful,
+    isLoading
   }
 }
