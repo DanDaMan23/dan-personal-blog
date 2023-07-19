@@ -23,12 +23,12 @@ export default function DeveloperJourney() {
 
       <h4>{text.webDevelopment.learningMethods.heading}</h4>
       {text.webDevelopment.learningMethods.details.map((detail) => (
-        <p>{detail}</p>
+        <p key={detail}>{detail}</p>
       ))}
 
       <h5>{text.webDevelopment.learningMethods.analogy.heading}</h5>
       {text.webDevelopment.learningMethods.analogy.details.map((detail) => (
-        <p>{detail}</p>
+        <p key={detail}>{detail}</p>
       ))}
     </div>
   )

@@ -25,7 +25,7 @@ export default function NavigationBarDesktop() {
                 >
                   <ul className='desktop-navigation__sub-items'>
                     {subItems.map(({ label, onClick }) => (
-                      <li className='desktop-navigation__sub-item'>
+                      <li key={label} className='desktop-navigation__sub-item'>
                         <button type='button' onClick={onClick}>
                           {label}
                         </button>

@@ -1,61 +1,72 @@
-@use '../../style-utils/colors.scss' as *;
+@use "../../style-utils/colors.scss" as *;
+@use "../../style-utils//media-queries.scss" as *;
 
 $carousel-border-radius: 25px;
 
-.carousel {
-  display: grid;
-  grid-template-columns: 1fr 30fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  margin: 2rem;
-  border-radius: $carousel-border-radius;
-  height: 70vh;
+.carousel-container {
+  display: flex;
+  justify-content: center;
 
-  background-position: top;
-  background-size: cover;
+  .carousel {
+    display: grid;
+    grid-template-columns: 1fr 30fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 2rem;
+    border-radius: $carousel-border-radius;
+    height: 70vh;
+    max-width: 900px;
 
-  button {
-    cursor: pointer;
-  }
+    background-position: center;
+    background-size: cover;
 
-  .carousel-button {
-    background: rgba(0, 0, 0, 0.1);
-    border: none;
-    grid-row-start: 1;
-    grid-row-end: -1;
-
-    path {
-      color: $light-text-color;
-    }
-  }
-
-  .carousel-button:nth-of-type(1) {
-    border-radius: $carousel-border-radius 0 0 $carousel-border-radius;
-    margin-right: 1rem;
-  }
-  .carousel-button:nth-of-type(2) {
-    border-radius: 0 $carousel-border-radius $carousel-border-radius 0;
-    margin-left: 1rem;
-  }
-
-  .carousel-description {
-    background: rgba(0, 0, 0, 0.7);
-    grid-row-start: -2;
-    grid-row-end: -1;
-    border-radius: $carousel-border-radius $carousel-border-radius 0 0;
-
-    padding: 0.7rem;
-
-    .carousel-title,
-    .carousel-details {
-      color: $light-text-color;
+    @include desktop-view {
+      background-position: top;
     }
 
-    .carousel-details {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    button {
+      cursor: pointer;
+    }
+
+    .carousel-button {
+      background: rgba(0, 0, 0, 0.1);
+      border: none;
+      grid-row-start: 1;
+      grid-row-end: -1;
+
+      path {
+        color: $light-text-color;
+      }
+    }
+
+    .carousel-button:nth-of-type(1) {
+      border-radius: $carousel-border-radius 0 0 $carousel-border-radius;
+      margin-right: 1rem;
+    }
+    .carousel-button:nth-of-type(2) {
+      border-radius: 0 $carousel-border-radius $carousel-border-radius 0;
+      margin-left: 1rem;
+    }
+
+    .carousel-description {
+      background: rgba(0, 0, 0, 0.7);
+      grid-row-start: -2;
+      grid-row-end: -1;
+      border-radius: $carousel-border-radius $carousel-border-radius 0 0;
+
+      padding: 0.7rem;
+
+      .carousel-title,
+      .carousel-details {
+        color: $light-text-color;
+      }
+
+      .carousel-details {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 }
