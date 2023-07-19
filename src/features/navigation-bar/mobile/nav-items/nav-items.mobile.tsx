@@ -8,8 +8,6 @@ export default function NavItems() {
 
   const { pathname } = useLocation()
 
-  console.log(pathname)
-
   return (
     <ul className='mobile-nav__items'>
       {navigationItems.map(({ label, onClick, subItems, routeLocation }) => (

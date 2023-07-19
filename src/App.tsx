@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import NavigationMobileContextProvider from "./features/navigation-bar/mobile/context/navigation.mobile.context"
 
 import "./App.scss"
@@ -11,9 +11,15 @@ import NavigationBarDesktop from "./features/navigation-bar/desktop/navigation.d
 import DeveloperJourney from "./features/about-me/developer_journey/developer-journey"
 import ReadingHobby from "./features/about-me/reading-hobby/reading-hobby"
 import Boxing from "./features/about-me/boxing/boxing"
+import { useEffect } from "react"
 
 export default function App() {
   const { deviceView } = useMediaQuery()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <div className='App'>
