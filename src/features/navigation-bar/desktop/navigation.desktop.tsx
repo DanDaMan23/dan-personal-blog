@@ -13,8 +13,6 @@ export default function NavigationBarDesktop() {
 
   const { pathname } = useLocation()
 
-  console.log(pathname)
-
   return (
     <div className='navigation-bar-desktop'>
       <img src={logo} alt='DLawCons' height={LOGO_SIZE} />
