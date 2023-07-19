@@ -22,6 +22,12 @@
     justify-content: space-around;
     align-items: center;
 
+    .active-nav {
+      button {
+        text-decoration: underline;
+      }
+    }
+
     .desktop-navigation__item {
       button {
         font-size: 1.5rem;
@@ -39,6 +45,13 @@
       }
 
       .desktop-navigation__sub-items {
+        .active-sub-nav {
+          background: $primary-color;
+          button {
+            color: $light-text-color !important;
+          }
+        }
+
         list-style: none;
         padding: 0;
         margin: 0;
@@ -47,9 +60,11 @@
           button {
             color: $primary-color;
             font-size: 1.2rem;
-            padding: 0.4rem;
+            padding: 1rem;
+            margin: 0;
             width: 100%;
             text-align: left;
+            text-decoration: unset;
           }
         }
       }

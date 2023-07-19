@@ -8,18 +8,18 @@
   text-align: left;
 }
 
-.active-nav {
-  background: $primary-color;
-  button {
-    color: $light-text-color;
-  }
-}
-
 .mobile-nav__items,
 .sub-nav__items {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  .active-nav {
+    background: $primary-color;
+    button {
+      color: $light-text-color;
+    }
+  }
 }
 
 .mobile-nav__item {
