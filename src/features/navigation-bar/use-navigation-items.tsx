@@ -34,12 +34,13 @@ export default function useNavigationItems() {
           label: "Travel",
           routeLocation: "/aboutMe/travel",
           onClick: () => navigate("/aboutMe/travel")
-        },
-        {
-          label: "Fitness",
-          routeLocation: "/aboutMe/fitness",
-          onClick: () => navigate("/aboutMe/fitness")
         }
+        // Will be added after
+        // {
+        //   label: "Fitness",
+        //   routeLocation: "/aboutMe/fitness",
+        //   onClick: () => navigate("/aboutMe/fitness")
+        // }
       ]
     },
     {
