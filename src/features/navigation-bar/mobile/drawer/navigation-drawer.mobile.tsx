@@ -16,12 +16,8 @@ export default function NavigationDrawer({
   children
 }: NavigationDrawerProps) {
   return (
-    <div
-      style={{ display: show ? "block" : "none" }}
-      className='navigation-drawer'
-    >
-      {/* Use SVG or FontAwesome Icons  */}
-      <button type='button' className="close-button" onClick={onClose}>
+    <div className={`navigation-drawer ${show && "show-drawer"}`}>
+      <button type='button' className='close-button' onClick={onClose}>
         <FontAwesomeIcon icon={faClose} />
       </button>
       <div>{children}</div>

@@ -13,10 +13,10 @@ export default function useNavigationItems() {
           label: "Web Development",
           onClick: () => navigate("/aboutMe/webDevelopment")
         },
-        { label: "Books", onClick: () => navigate("/aboutMe/books") },
-        { label: "Fitness", onClick: () => navigate("/aboutMe/fitness") },
         { label: "Boxing", onClick: () => navigate("/aboutMe/boxing") },
-        { label: "Travel", onClick: () => navigate("/aboutMe/travel") }
+        { label: "Books", onClick: () => navigate("/aboutMe/books") },
+        { label: "Travel", onClick: () => navigate("/aboutMe/travel") },
+        { label: "Fitness", onClick: () => navigate("/aboutMe/fitness") }
       ]
     },
     {
