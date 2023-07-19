@@ -33,7 +33,7 @@ export default function Carousel({ items }: CarouselProps) {
   }, [items.length])
 
   return (
-    <>
+    <div className='carousel-container'>
       <div className='carousel' style={{ backgroundImage: items[index].image }}>
         <button
           type='button'
@@ -63,6 +63,6 @@ export default function Carousel({ items }: CarouselProps) {
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
-    </>
+    </div>
   )
 }
