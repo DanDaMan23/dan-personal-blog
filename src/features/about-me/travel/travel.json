@@ -5,6 +5,20 @@
     "montreal": {
       "title": "Montreal 2022",
       "description": "I embarked on a solo journey to Montreal, and the experience proved to be truly amazing. It not only allowed me to discover new places and cultures but also provided a valuable opportunity for self-reflection and personal growth. Through exploring the city independently, I gained a deeper understanding of myself and forged lasting memories that continue to resonate with me."
+    },
+    "newYork": {
+      "title": "New York September 2023 Plan",
+      "description": "Embracing the joy of solo travel, I embarked on a memorable journey to Montreal in 2022. Since I am down for more adventures, I set my next solo trip on New York City for September 2023. Fascinated by my friends' stories about food, parks, people and overall exploration. I believe this would be another memorable journey. ",
+      "thingsToDo": {
+        "title": "Activities that I plan to do there",
+        "list": [
+          "Go to at least one boxing gym",
+          "Visit 9/11 Memorial Museum",
+          "Bike around Central Park",
+          "Walk around Time Square",
+          "Try to meet as many people as I can, plus I am staying in a hostel"
+        ]
+      }
     }
   }
 }
