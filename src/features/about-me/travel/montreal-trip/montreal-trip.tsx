@@ -1,5 +1,7 @@
 import text from "../travel.json"
 
+import "./montreal-trip.scss"
+
 interface MontrealTripProps {
   show: boolean
 }
