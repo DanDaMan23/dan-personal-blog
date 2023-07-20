@@ -1,4 +1,10 @@
 {
   "mainTitle": "Travel",
-  "mainDescription": "Traveling is an incredible journey that allows me to throw myself into diverse cultures and embrace the essence of each unique destination. It provides me an opportunity for personal growth and opening a world of new experience. With every adventure, I appreciate the chance to understand what it truly means to live in different places and cherish the value of diverse cultures."
+  "mainDescription": "Traveling is an incredible journey that allows me to throw myself into diverse cultures and embrace the essence of each unique destination. It provides me an opportunity for personal growth and opening a world of new experience. With every adventure, I appreciate the chance to understand what it truly means to live in different places and cherish the value of diverse cultures.",
+  "trips": {
+    "montreal": {
+      "title": "Montreal 2022",
+      "description": "I embarked on a solo journey to Montreal, and the experience proved to be truly amazing. It not only allowed me to discover new places and cultures but also provided a valuable opportunity for self-reflection and personal growth. Through exploring the city independently, I gained a deeper understanding of myself and forged lasting memories that continue to resonate with me."
+    }
+  }
 }

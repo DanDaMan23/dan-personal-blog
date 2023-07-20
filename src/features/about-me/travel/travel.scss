@@ -1,0 +1,15 @@
+.travel {
+  .montreal-trip {
+    .photos-section {
+      display: flex;
+      justify-content: space-between;
+      overflow-x: scroll;
+
+
+      img {
+        margin: 1rem 1rem;
+        width: 20vw;
+      }
+    }
+  }
+}
