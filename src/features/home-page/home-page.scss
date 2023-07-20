@@ -1,25 +1,46 @@
 @use "../../style-utils/colors.scss" as *;
+@use "../../style-utils/media-queries.scss" as *;
 
 .home-page {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
-  // background: url("../../photos/St\ Joseph\ Orathory.jpg") center/cover;
+  min-height: 90vh;
 
-  div {
+  .content-container {
     text-align: center;
     padding: 4rem;
-    margin: 1rem;
+    margin: 3rem 1rem;
     background: rgba(0, 0, 0, 0.75);
     border: 1px $primary-color solid;
     border-radius: 30px;
-    max-width: 85vw;
+    max-width: 900px;
 
     p,
     h2 {
       color: $light-text-color;
+    }
+
+    img {
+      width: 40%;
+      border-radius: 10px;
+    }
+  }
+
+  @include desktop-view {
+    .content-container {
+      display: flex;
+      align-items: center;
+      text-align: unset;
+
+      .image-container {
+        text-align: center;
+        margin-right: 1rem;
+        img {
+          width: 70%;
+        }
+      }
     }
   }
 }
