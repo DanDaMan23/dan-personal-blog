@@ -34,7 +34,7 @@ export default function AboutMe() {
       image: `url(${require("./photos/Travel.jpg")})`,
       title: "Travel",
       details:
-        "Last year, I embarked on a solo journey to Montreal, and the experience proved to be truly amazing. It not only allowed me to discover new places and cultures but also provided a valuable opportunity for self-reflection and personal growth. Through exploring the city independently, I gained a deeper understanding of myself and forged lasting memories that continue to resonate with me.",
+        "In August 2022, I embarked on a solo journey to Montreal, and the experience proved to be truly amazing. It not only allowed me to discover new places and cultures but also provided a valuable opportunity for self-reflection and personal growth. Through exploring the city independently, I gained a deeper understanding of myself and forged lasting memories that continue to resonate with me.",
       onClick: () => navigate("/aboutMe/travel")
     }
   ]

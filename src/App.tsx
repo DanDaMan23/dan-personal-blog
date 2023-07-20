@@ -12,6 +12,7 @@ import DeveloperJourney from "./features/about-me/developer_journey/developer-jo
 import ReadingHobby from "./features/about-me/reading-hobby/reading-hobby"
 import Boxing from "./features/about-me/boxing/boxing"
 import { useEffect } from "react"
+import Travel from "./features/about-me/travel/travel"
 
 export default function App() {
   const { deviceView } = useMediaQuery()
@@ -37,8 +38,8 @@ export default function App() {
           <Route path='webDevelopment' element={<DeveloperJourney />} />
           <Route path='boxing' element={<Boxing />} />
           <Route path='books' element={<ReadingHobby />} />
-          <Route path='fitness' element={<>Fitness Page</>} />
-          <Route path='travel' element={<>Travel Page</>} />
+          {/* To be added after new york <Route path='fitness' element={<>Fitness Page</>} /> */}
+          <Route path='travel' element={<Travel />} />
         </Route>
         <Route path='contactMe' element={<ContactMePage />} />
       </Routes>
