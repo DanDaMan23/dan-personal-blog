@@ -16,7 +16,7 @@ export default function TabSwitcher({
       {tabs.map((tab) => (
         <button
           type='button'
-          className={`${activeTab === tab && "active-tab"}`}
+          className={`${activeTab === tab ? "active-tab" : " "}`}
           onClick={() => setActiveTab(tab)}
         >
           {tab}
