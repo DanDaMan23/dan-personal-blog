@@ -1,4 +1,4 @@
-import logo from "../../../photos/dlawcons_logo.png"
+import logo from "../../../photos/dlawcons_logo_light_color.png"
 import useNavigationItems from "../use-navigation-items"
 
 import Accordion from "../../../components/accordion/accordion.component"

@@ -1,11 +1,12 @@
 import { useContext } from "react"
 import Backdrop from "../../../components/backdrop/backdrop.component"
 import HamburgerButton from "../../../components/hamburger-button/hamburger-button.component"
-import "./navigation-bar.mobile.scss"
 import NavigationDrawer from "./drawer/navigation-drawer.mobile"
 import NavItems from "./nav-items/nav-items.mobile"
 import { NavigationMobileContext } from "./context/navigation.mobile.context"
-import logo from '../../../photos/dlawcons_logo.png'
+import logo from '../../../photos/dlawcons_logo_light_color.png'
+
+import "./navigation-bar.mobile.scss"
 
 export default function NavigationBarMobile() {
   const { showMobileNavigation, openNavigationDrawer, closeNavigationDrawer } =

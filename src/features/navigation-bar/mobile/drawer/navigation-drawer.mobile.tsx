@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
-import logo from '../../../../photos/dlawcons_logo.png'
+import logo from '../../../../photos/dlawcons_logo_dark_color.png'
 
 import "./navigation-drawer.mobile.scss"
 
