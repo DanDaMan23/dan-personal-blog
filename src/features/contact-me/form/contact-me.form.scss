@@ -17,10 +17,12 @@
     input,
     textarea {
       margin: 0.3rem 0;
+      background: none;
     }
 
     input,
     textarea {
+      font-family: 'Raleway', sans-serif;
       border: 1px solid $primary-color;
       border-radius: 7px;
       padding: 0.4rem;
