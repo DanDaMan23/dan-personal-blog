@@ -5,8 +5,15 @@
   grid-template-columns: 1fr 4fr 1fr;
 
   background: rgba(92, 79, 134, 0.75);
-  padding: 0.5rem 1.5rem;
   box-shadow: 0 0 5px rgb(0, 0, 0);
+
+  .logo-button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    padding: 0.5rem 0;
+  }
 
   .desktop-navigation {
     display: grid;
@@ -42,14 +49,22 @@
         path {
           color: $light-text-color;
         }
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .desktop-navigation__sub-items {
-        .active-sub-nav {
+        @mixin active-sub-nav {
           background: $primary-color;
           button {
             color: $light-text-color !important;
           }
+        }
+
+        .active-sub-nav {
+          @include active-sub-nav;
         }
 
         list-style: none;
@@ -65,6 +80,10 @@
             width: 100%;
             text-align: left;
             text-decoration: unset;
+          }
+
+          &:hover {
+            @include active-sub-nav;
           }
         }
       }
