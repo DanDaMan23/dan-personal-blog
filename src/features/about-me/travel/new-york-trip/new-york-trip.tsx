@@ -1,12 +1,8 @@
 import text from "../travel.json"
 
-interface NewYorkTripProps {
-  show: boolean
-}
-
-export default function NewYorkTrip({ show }: NewYorkTripProps) {
+export default function NewYorkTrip() {
   return (
-    <div className='new-york-trip' style={{ display: show ? "block" : "none" }}>
+    <div className='new-york-trip'>
       <h4>{text.trips.newYork.title}</h4>
       <p>{text.trips.newYork.description}</p>
       <h4>{text.trips.newYork.thingsToDo.title}</h4>

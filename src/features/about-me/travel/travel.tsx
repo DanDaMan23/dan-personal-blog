@@ -11,6 +11,17 @@ export default function Travel() {
 
   const tabSwitcherProps = useTabSwitcher(tabs)
 
+  const tripSection = () => {
+    switch (tabSwitcherProps.activeTab) {
+      case tabs[0]:
+        return <MontrealTrip />
+      case tabs[1]:
+        return <NewYorkTrip />
+      default:
+        return <></>
+    }
+  }
+
   return (
     <div className='travel'>
       <h3>{text.mainTitle}</h3>
@@ -18,13 +29,7 @@ export default function Travel() {
       <p>{text.mainDescription}</p>
 
       <TabSwitcher {...tabSwitcherProps} />
-
-      {/* TODO: Try refactoring the whole tab switcher component. */}
-      {/* Scenario: What if there are 100 pages, are we going to do tabs[0], tabs[1] ... tabs[100]? */}
-      <div className='trip-section'>
-        <MontrealTrip show={tabSwitcherProps.activeTab === tabs[0]} />
-        <NewYorkTrip show={tabSwitcherProps.activeTab === tabs[1]} />
-      </div>
+      <div className='trip-section'>{tripSection()}</div>
     </div>
   )
 }
