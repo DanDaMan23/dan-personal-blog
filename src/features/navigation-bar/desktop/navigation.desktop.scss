@@ -49,14 +49,22 @@
         path {
           color: $light-text-color;
         }
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .desktop-navigation__sub-items {
-        .active-sub-nav {
+        @mixin active-sub-nav {
           background: $primary-color;
           button {
             color: $light-text-color !important;
           }
+        }
+
+        .active-sub-nav {
+          @include active-sub-nav;
         }
 
         list-style: none;
@@ -72,6 +80,10 @@
             width: 100%;
             text-align: left;
             text-decoration: unset;
+          }
+
+          &:hover {
+            @include active-sub-nav;
           }
         }
       }
