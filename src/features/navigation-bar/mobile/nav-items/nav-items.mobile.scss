@@ -6,6 +6,12 @@
   cursor: pointer;
   padding: 1rem;
   text-align: left;
+  width: 100%;
+
+  &:hover {
+    background: $primary-color;
+    color: $light-text-color;
+  }
 }
 
 .mobile-nav__items,
@@ -30,10 +36,9 @@
 }
 
 .sub-nav__item {
-  padding: 0.05rem 0.5rem;
-
   button {
     font-size: 0.8rem;
     @include nav-button;
+    padding: 0.5rem 2rem;
   }
 }
