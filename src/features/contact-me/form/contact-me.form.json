@@ -1,0 +1,37 @@
+{
+  "fullName": {
+    "label": "Full Name: ",
+    "placeholder": "Enter your Full Name",
+    "validations": {
+      "required": "Full Name Required"
+    }
+  },
+  "email": {
+    "label": "Email: ",
+    "placeholder": "Enter your Email Address",
+    "validations": {
+      "required": "Email Required",
+      "invalidEmail": "Invalid Email Address"
+    }
+  },
+  "subject": {
+    "label": "Subject: ",
+    "placeholder": "Enter the Subject",
+    "validations": {
+      "required": "Subject Required"
+    }
+  },
+  "message": {
+    "label": "Message: ",
+    "placeholder": "Enter your Message",
+    "validations": {
+      "required": "Message Required"
+    }
+  },
+  "buttons": {
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "clear": "Clear"
+  },
+  "successMessage": "Email Sent"
+}
