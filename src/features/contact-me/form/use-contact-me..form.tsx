@@ -10,16 +10,17 @@ export default function useContactMeForm() {
 
   const contactMeFormSchema = yup
     .object({
-      fullName: yup.string().required(text.fullName.validations.required),
+      fullName: yup.string().trim().required(text.fullName.validations.required),
       email: yup
-        .string()
+        .string().trim()
         .required(text.email.validations.required)
         .matches(
           /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
           text.email.validations.invalidEmail
         ),
-      subject: yup.string().required(text.subject.validations.required),
-      message: yup.string().required(text.message.validations.required)
+      subject: yup.string().trim().required(text.subject.validations.required),
+      message: yup.string().trim().required(text.message.validations.required),
+      recaptcha: yup.string().trim().required(text.recaptchaRequired)
     })
     .required()
 

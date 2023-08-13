@@ -33,5 +33,6 @@
     "submitting": "Submitting...",
     "clear": "Clear"
   },
+  "recaptchaRequired": "Please Complete ReCaptcha",
   "successMessage": "Email Sent"
 }

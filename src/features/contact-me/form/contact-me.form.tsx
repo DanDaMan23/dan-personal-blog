@@ -70,6 +70,16 @@ export default function ContactMeForm() {
           />
         )}
       </div>
+      <div className='form-field'>
+        <div />
+        <ReCaptcha sitekey={captchaKey} ref={register("recaptcha").ref} />
+        {errors.recaptcha && (
+          <ErrorMessage
+            className='error-field'
+            message={errors?.recaptcha?.message ?? ""}
+          />
+        )}
+      </div>
       <div className='status-area'>
         {isSubmitSuccessful && (
           <SuccessMessage
@@ -78,12 +88,6 @@ export default function ContactMeForm() {
           />
         )}
       </div>
-      <ReCaptcha
-        sitekey={captchaKey}
-        onChange={(value: any) => {
-          console.log(value)
-        }}
-      />
       <div className='button-area'>
         <button type='submit' className='primary-button' disabled={isLoading}>
           {isLoading ? text.buttons.submitting : text.buttons.submit}
