@@ -1,6 +1,7 @@
 import ErrorMessage from "../../../components/error-message/error-message.component"
 import SuccessMessage from "../../../components/success-message/success-message.component"
 import useContactMeForm from "./use-contact-me..form"
+import ReCaptcha from "react-google-recaptcha"
 import text from "./contact-me.form.json"
 
 import "./contact-me.form.scss"
@@ -75,7 +76,12 @@ export default function ContactMeForm() {
           />
         )}
       </div>
-      <div data-netlify-recaptcha='true' />
+      <ReCaptcha
+        sitekey='SITE_RECAPTCHA_KEY'
+        onChange={(value: any) => {
+          console.log(value)
+        }}
+      />
       <div className='button-area'>
         <button type='submit' className='primary-button' disabled={isLoading}>
           {isLoading ? text.buttons.submitting : text.buttons.submit}
