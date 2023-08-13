@@ -5,6 +5,12 @@ import * as yup from "yup"
 import emailjs from "@emailjs/browser"
 import text from "./contact-me.form.json"
 
+declare global {
+  interface Window {
+    grecaptcha: { reset: () => void }
+  }
+}
+
 export default function useContactMeForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -66,6 +72,7 @@ export default function useContactMeForm() {
 
   const onClear = (e: FormEvent) => {
     e.preventDefault()
+    window.grecaptcha.reset()
     reset()
   }
 
