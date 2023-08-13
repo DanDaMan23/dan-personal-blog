@@ -10,7 +10,12 @@ export default function ContactMeForm() {
     useContactMeForm()
 
   return (
-    <form onSubmit={onSubmit} className='contact-me-form'>
+    <form
+      onSubmit={onSubmit}
+      className='contact-me-form'
+      data-netlify-recaptcha='true'
+      data-netlify='true'
+    >
       <div className='form-field'>
         <label htmlFor='fullName'>{text.fullName.label}</label>
         <input
@@ -70,6 +75,7 @@ export default function ContactMeForm() {
           />
         )}
       </div>
+      <div data-netlify-recaptcha='true' />
       <div className='button-area'>
         <button type='submit' className='primary-button' disabled={isLoading}>
           {isLoading ? text.buttons.submitting : text.buttons.submit}
