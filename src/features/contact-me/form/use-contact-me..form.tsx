@@ -72,8 +72,8 @@ export default function useContactMeForm() {
 
   const onClear = (e: FormEvent) => {
     e.preventDefault()
-    window.grecaptcha.reset()
     reset()
+    window.grecaptcha.reset()
   }
 
   return {
