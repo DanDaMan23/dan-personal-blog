@@ -72,13 +72,7 @@ export default function ContactMeForm() {
       </div>
       <div className='form-field'>
         <div />
-        <ReCaptcha sitekey={captchaKey} ref={register("recaptcha").ref} />
-        {errors.recaptcha && (
-          <ErrorMessage
-            className='error-field'
-            message={errors?.recaptcha?.message ?? ""}
-          />
-        )}
+        <ReCaptcha sitekey={captchaKey}/>
       </div>
       <div className='status-area'>
         {isSubmitSuccessful && (
