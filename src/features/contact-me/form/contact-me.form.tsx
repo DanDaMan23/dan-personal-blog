@@ -10,6 +10,8 @@ export default function ContactMeForm() {
   const { register, onSubmit, onClear, errors, isSubmitSuccessful, isLoading } =
     useContactMeForm()
 
+  const captchaKey: string = process.env.REACT_APP_SITE_RECAPTCHA_KEY || ""
+
   return (
     <form
       onSubmit={onSubmit}
@@ -77,7 +79,7 @@ export default function ContactMeForm() {
         )}
       </div>
       <ReCaptcha
-        sitekey='SITE_RECAPTCHA_KEY'
+        sitekey={captchaKey}
         onChange={(value: any) => {
           console.log(value)
         }}
