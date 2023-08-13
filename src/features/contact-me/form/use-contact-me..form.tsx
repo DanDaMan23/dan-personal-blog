@@ -10,9 +10,13 @@ export default function useContactMeForm() {
 
   const contactMeFormSchema = yup
     .object({
-      fullName: yup.string().trim().required(text.fullName.validations.required),
+      fullName: yup
+        .string()
+        .trim()
+        .required(text.fullName.validations.required),
       email: yup
-        .string().trim()
+        .string()
+        .trim()
         .required(text.email.validations.required)
         .matches(
           /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
@@ -30,7 +34,8 @@ export default function useContactMeForm() {
     register,
     handleSubmit,
     formState: { errors, isValid, isSubmitSuccessful },
-    reset
+    reset,
+    setValue
   } = useForm<ContactMeFormData>({
     resolver: yupResolver(contactMeFormSchema)
   })
@@ -71,6 +76,7 @@ export default function useContactMeForm() {
     errors,
     isValid,
     isSubmitSuccessful,
-    isLoading
+    isLoading,
+    setValue
   }
 }

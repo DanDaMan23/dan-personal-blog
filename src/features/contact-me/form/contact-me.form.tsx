@@ -7,8 +7,15 @@ import text from "./contact-me.form.json"
 import "./contact-me.form.scss"
 
 export default function ContactMeForm() {
-  const { register, onSubmit, onClear, errors, isSubmitSuccessful, isLoading } =
-    useContactMeForm()
+  const {
+    register,
+    onSubmit,
+    onClear,
+    errors,
+    isSubmitSuccessful,
+    isLoading,
+    setValue
+  } = useContactMeForm()
 
   const captchaKey: string = process.env.REACT_APP_SITE_RECAPTCHA_KEY || ""
 
@@ -72,7 +79,15 @@ export default function ContactMeForm() {
       </div>
       <div className='form-field'>
         <div />
-        <ReCaptcha sitekey={captchaKey} ref={register("recaptcha").ref} />
+        <ReCaptcha
+          sitekey={captchaKey}
+          ref={register("recaptcha").ref}
+          onChange={(token: string | null) => {
+            if (token) {
+              setValue("recaptcha", token)
+            }
+          }}
+        />
         {errors.recaptcha && (
           <ErrorMessage
             className='error-field'
