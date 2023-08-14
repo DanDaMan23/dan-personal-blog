@@ -41,7 +41,8 @@ export default function useContactMeForm() {
     handleSubmit,
     formState: { errors, isValid, isSubmitSuccessful },
     reset,
-    setValue
+    setValue,
+    getValues
   } = useForm<ContactMeFormData>({
     resolver: yupResolver(contactMeFormSchema)
   })
@@ -74,6 +75,7 @@ export default function useContactMeForm() {
     e.preventDefault()
     reset()
     window.grecaptcha.reset()
+    setValue("recaptcha", "")
   }
 
   return {
