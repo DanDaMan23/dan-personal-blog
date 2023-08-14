@@ -14,6 +14,10 @@ declare global {
 export default function useContactMeForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
+  const serviceId: string = process.env.REACT_APP_SITE_SERVICE_ID || ""
+  const templateId: string = process.env.REACT_APP_SITE_TEMPLATE_ID || ""
+  const publicKey: string = process.env.REACT_APP_PUBLIC_KEY || ""
+
   const contactMeFormSchema = yup
     .object({
       fullName: yup
@@ -46,35 +50,35 @@ export default function useContactMeForm() {
     resolver: yupResolver(contactMeFormSchema)
   })
 
+  const onClear = (e: FormEvent) => {
+    e.preventDefault()
+    reset()
+    window.grecaptcha.reset()
+    setValue("recaptcha", "")
+  }
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
     handleSubmit(async (data: ContactMeFormData) => {
       setIsLoading(true)
       await emailjs
         .send(
-          "service_tfdxghl",
-          "template_cb5h6mg",
+          serviceId,
+          templateId,
           {
             ...data
           },
-          "B1TgxrcFscxkVz81G"
+          publicKey
         )
         .then((response) => {
           console.log(response)
-          reset()
+          onClear(e)
         })
         .catch((error) => {
           console.log(error)
         })
       setIsLoading(false)
     })()
-  }
-
-  const onClear = (e: FormEvent) => {
-    e.preventDefault()
-    reset()
-    window.grecaptcha.reset()
-    setValue("recaptcha", "")
   }
 
   return {
