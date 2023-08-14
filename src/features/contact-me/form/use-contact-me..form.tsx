@@ -41,8 +41,7 @@ export default function useContactMeForm() {
     handleSubmit,
     formState: { errors, isValid, isSubmitSuccessful },
     reset,
-    setValue,
-    getValues
+    setValue
   } = useForm<ContactMeFormData>({
     resolver: yupResolver(contactMeFormSchema)
   })
