@@ -11,7 +11,7 @@ export default function Travel() {
 
   const tabSwitcherProps = useTabSwitcher(tabs)
 
-  const tripSection = () => {
+  const TripSection = () => {
     switch (tabSwitcherProps.activeTab) {
       case tabs[0]:
         return <MontrealTrip />
@@ -29,7 +29,9 @@ export default function Travel() {
       <p>{text.mainDescription}</p>
 
       <TabSwitcher {...tabSwitcherProps} />
-      <div className='trip-section'>{tripSection()}</div>
+      <div className='trip-section'>
+        <TripSection />
+      </div>
     </div>
   )
 }
