@@ -10,7 +10,10 @@ export default function ProjectCard({
   console.log(title)
   return (
     <div className='project-card'>
-      <img src={imagePath} alt={title} />
+      <div className='picture-container'>
+        <img src={imagePath} alt={title} />
+      </div>
+
       <h3>{title}</h3>
       <p>{description}</p>
     </div>

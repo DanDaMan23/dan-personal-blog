@@ -29,6 +29,7 @@ export default function DeveloperJourney() {
       <h4>{text.webDevelopment.specializationDetails.heading}</h4>
       <p>{text.webDevelopment.specializationDetails.details}</p>
 
+      <h3>{text.webDevelopment.projectsTitle}</h3>
       <ul className='projects'>{projectList}</ul>
 
       <h4>{text.webDevelopment.learningDetails.heading}</h4>

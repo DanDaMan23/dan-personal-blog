@@ -1,11 +1,19 @@
+@use "../../../../style-utils//colors.scss" as *;
+
 .project-card {
   padding: 0.5rem;
-  border: 1px black solid;
+  border: 2px $primary-color solid;
   border-radius: 20px;
   margin: 0.5rem 0;
 
-  img {
-    width: 100%;
+  .picture-container {
+    border: 4px $secondary-color solid;
     border-radius: 20px;
+    padding: 0.5rem;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
   }
 }
