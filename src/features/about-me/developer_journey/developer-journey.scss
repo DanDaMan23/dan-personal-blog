@@ -1,3 +1,5 @@
+@use "../../../style-utils//media-queries.scss" as *;
+
 .developer-journey {
   .developer-journey-image__container {
     padding: 1rem;
@@ -7,7 +9,12 @@
   }
 
   .projects {
-    list-style-type: none;
     padding: 0;
+
+    @include desktop-view {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
   }
 }

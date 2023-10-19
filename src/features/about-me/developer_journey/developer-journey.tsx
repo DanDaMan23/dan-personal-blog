@@ -1,16 +1,14 @@
 import text from "./developer-journey.json"
 import { DeveloperProject, developerProjects } from "./developer-project.model"
+import ProjectCard from "./project-card/project-card.component"
 
 import "./developer-journey.scss"
-import ProjectCard from "./project-card/project-card.component"
 
 // Not sure if I just wanted Web development so I just name the function DeveloperJourney
 export default function DeveloperJourney() {
   const projectList = developerProjects.map(
     (project: DeveloperProject, index: number) => (
-      <li key={index}>
-        <ProjectCard {...project} />
-      </li>
+      <ProjectCard key={index} {...project} />
     )
   )
 
