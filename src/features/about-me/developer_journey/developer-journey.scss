@@ -1,8 +1,20 @@
+@use "../../../style-utils//media-queries.scss" as *;
+
 .developer-journey {
   .developer-journey-image__container {
     padding: 1rem;
     .developer-journey-image {
       border-radius: 20px;
+    }
+  }
+
+  .projects {
+    padding: 0;
+
+    @include desktop-view {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
     }
   }
 }
